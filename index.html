@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Frontend Developer — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="profile">
+        <img src="pics/skycoderun.png" alt="Profile" class="avatar">
+        <h1 class="name">OLATOKE OLAMILEKAN</h1>
+        <p class="title">Frontend Developer • React • UI/UX</p>
+      </div>
+
+      <nav class="nav">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#clients" class="nav-link">Clients</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a class="whatsapp-link" href="https://wa.me/2348032600813" target="_blank" rel="noopener" title="Chat on WhatsApp">
+          <!-- static WhatsApp SVG -->
+          <img src="assets/whatsapp.svg" alt="WhatsApp" class="wa-icon">
+          <span>WhatsApp</span>
+        </a>
+
+        <div class="socials">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="https://www.linkedin.com/in/olamilekan-olatoke-72a83a20b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+      <header class="header">
+        <button id="hamburger" class="hamburger" aria-label="Open menu">☰</button>
+        <div class="header-actions">
+          <button id="themeToggle" class="btn small">Dark</button>
+        </div>
+      </header>
+
+      <section id="hero" class="hero">
+        <div class="hero-content">
+          <h2>Hello, I'm <span class="accent">Olamilekan</span></h2>
+          <p class="lead">Frontend Developer building fast, accessible, and beautiful web experiences with HTML, CSS, JavaScript, and React.</p>
+          <div class="cta">
+            <a href="#contact" class="btn primary">Hire Me</a>
+            <a href="#projects" class="btn outline">View Projects</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden>
+          <div class="card-3d"> <!-- subtle animated 3D card effect -->
+            <div class="card-face"> <img src="pics/project3.png" alt="work preview"> </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <h3>About Me</h3>
+        <div class="about-grid">
+          <div>
+            <p>I'm a frontend developer specializing in responsive websites, React, and UX design. I build production ready websites and maintain, test, and update applications to keep them fast and accessible.</p>
+            <ul class="counters">
+              <li><strong>4+</strong><span>Years Experience</span></li>
+              <li><strong>30+</strong><span>Projects</span></li>
+              <li><strong>20+</strong><span>Clients</span></li>
+            </ul>
+            <a href="#contact" class="btn">Let's Talk</a>
+            <a href="#" class="btn ghost">Download CV</a>
+          </div>
+          <div class="skills-list">
+            <div class="skill-bubble">HTML</div>
+            <div class="skill-bubble">CSS</div>
+            <div class="skill-bubble">JavaScript</div>
+            <div class="skill-bubble">React</div>
+            <div class="skill-bubble">UI/UX</div>
+            <div class="skill-bubble">Testing</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills">
+        <h3>Skills</h3>
+        <div class="skill-bars">
+          <div class="skill">
+            <label>HTML</label>
+            <div class="bar"><div class="progress" style="--pct:95%">95%</div></div>
+          </div>
+          <div class="skill">
+            <label>CSS</label>
+            <div class="bar"><div class="progress" style="--pct:92%">92%</div></div>
+          </div>
+          <div class="skill">
+            <label>JavaScript</label>
+            <div class="bar"><div class="progress" style="--pct:88%">88%</div></div>
+          </div>
+          <div class="skill">
+            <label>React</label>
+            <div class="bar"><div class="progress" style="--pct:86%">86%</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <h3>Services</h3>
+        <div class="cards">
+          <article class="card">
+            <h4>Frontend Development</h4>
+            <p>Responsive, accessible, and performant websites and apps.</p>
+          </article>
+          <article class="card">
+            <h4>UI / UX Design</h4>
+            <p>User centered designs and prototypes with Figma integration.</p>
+          </article>
+          <article class="card">
+            <h4>Maintenance & Testing</h4>
+            <p>Testing, optimization, and regular updates.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="projects">
+        <h3>Projects</h3>
+        <div class="project-grid">
+
+          <!-- Project card with internal slider -->
+          <article class="project-card" data-project="1">
+            <div class="project-slider">
+              <div class="slides">
+                <img src="pics/project1.png" alt="project image">
+                <img src="pics/project2.png" alt="project image">
+                <img src="pics/project4.png" alt="project image">
+              </div>
+              <button class="slide-prev">‹</button>
+              <button class="slide-next">›</button>
+            </div>
+            <div class="project-info">
+              <h4>Project One</h4>
+              <p>A web application built with latest tools, focused on performance and accessibility.</p>
+              <div class="meta">HTML • CSS • JavaScript • React</div>
+              <div class="project-actions">
+                <a href="#" class="btn small">Live</a>
+                <a href="#" class="btn ghost small">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Duplicate project cards as needed -->
+          <article class="project-card" data-project="2">
+            <div class="project-slider">
+              <div class="slides">
+                <img src="pics/project3.png" alt="project image">
+                <img src="pics/project5.png" alt="project image">
+              </div>
+              <button class="slide-prev">‹</button>
+              <button class="slide-next">›</button>
+            </div>
+            <div class="project-info">
+              <h4>Project Two</h4>
+              <p>Responsive marketing site with animations and SEO optimizations.</p>
+              <div class="meta">HTML • CSS • JavaScript</div>
+              <div class="project-actions">
+                <a href="#" class="btn small">Live</a>
+                <a href="#" class="btn ghost small">Code</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="clients" class="clients">
+        <h3>People I’ve Worked With</h3>
+        <div class="clients-slider">
+          <div class="client" tabindex="0">
+            <img src="pics/codeverse.jpg" alt="Client" width="80px">
+            <div class="client-name">Codeverse</div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="pics/web3.jpg" alt="Client" width="80px">
+            <div class="client-name">Web3bridge</div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="pics/huncho.jpg" alt="Client" width="80">
+            <div class="client-name">Huncho</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <h3>Contact Me</h3>
+        <div class="contact-grid">
+          <form id="contactForm">
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" required>
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required>
+            </div>
+            <div class="form-row">
+              <label for="projectType">Project Type</label>
+              <select id="projectType" name="projectType">
+                <option>Website</option>
+                <option>UI/UX</option>
+                <option>Maintenance</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="budget">Budget (optional)</label>
+              <input id="budget" name="budget" placeholder="$0 - $5000+">
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="form-row actions">
+              <button type="submit" class="btn primary">Send Message</button>
+              <button type="reset" class="btn ghost">Reset</button>
+            </div>
+            <div id="formStatus" aria-live="polite"></div>
+          </form>
+
+          <aside class="contact-info">
+            <h4>Contact</h4>
+            <p>Email: <a href="olamilekanolatoke@gmail.com">olamilekanolatoke@gmail.com</a></p>
+            <p>Phone: <a href="tel:+2348032600813">+2348032600813</a></p>
+            <p><a href="https://wa.me/2348032600813" target="_blank" rel="noopener"><img src="assets/whatsapp.svg" alt="whatsapp" class="wa-inline"> Message me on WhatsApp</a></p>
+
+            <h4>Location</h4>
+            <p>WorldWide • Remote • Hybrid • On-site</p>
+
+            <h4>Availability</h4>
+            <p>Open to hire me, freelance & contract work</p>
+          </aside>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>© <span id="year"></span> olamilekan, Built with HTML/CSS/JS</div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
